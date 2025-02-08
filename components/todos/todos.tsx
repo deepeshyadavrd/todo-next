@@ -3,7 +3,7 @@ import Todo from "./todo";
 import AddTodo from "./add-todo";
 
 export default async function Todos() {
-  const supabase = createClient();
+  const supabase = await createClient();
 
   const { data: todos, error } = await supabase.from("todos").select("*");
 

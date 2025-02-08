@@ -1,12 +1,12 @@
-import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
-import { cookies } from "next/headers";
+// import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
+// import { cookies } from "next/headers";
 
-export function createClient() {
-  return createServerComponentClient({ cookies });
-}
+// export function createClient() {
+//   return createServerComponentClient({ cookies });
+// }
 
-/***
- * import { createServerClient, type CookieOptions } from "@supabase/ssr";
+/****/
+import { createServerClient, type CookieOptions } from "@supabase/ssr";
 import { cookies } from "next/headers";
 
 export async function createClient() { // ✅ Make the function async
@@ -31,4 +31,4 @@ export async function createClient() { // ✅ Make the function async
   );
 }
 
- */
+ /***/
