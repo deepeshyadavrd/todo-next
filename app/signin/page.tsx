@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import { createClient } from "@/utils/supabase/server";
-// import { signin } from "@/actions/auth/actions";
+import { signin } from "@/actions/auth/actions";
 
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -49,7 +49,7 @@ export default async function SignInPage() {
               <Label htmlFor="password">Password</Label>
               <Input id="password" name="password" required type="password" />
             </div>
-            <Button className="w-full">Sign in</Button>
+            <Button formAction={signin} className="w-full">Sign in</Button>
           </form>
           <Separator />
           <div className="space-y-4">
